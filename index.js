@@ -28,11 +28,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+    Counter1 declares and accesses the count variable within the function, utilizing the local scope. 
+    Counter2 declares the count variable outside the function and accesses it globally.
+
   2. Which of the two uses a closure? How can you tell?
-  
+      Counter 2 uses a closure because it scopes outside of the function to access the target variable.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     Counter1 would be preferrable if you didn't want your counter variable to accesible from outside the function. If you just wanted to use that variable for logic based
+     within the function then it would be better. If you wanted to access that counter variable and use it for a part of your code outside that function, counter2 would be
+     preferrable. For example, if you wanted to use that counter variable as the stop condition in a for loop within another function, you could do that with counter2's scenario.
 */
 
 // counter1 code
